@@ -16,4 +16,4 @@ def girwar(request):
 
 
 def greet(request, name) :
-    return HttpResponse(f"Hello {name.capitalize()}!!")
+    return render(request, "first_django_app/greet.html", {"name" : name.capitalize()})
