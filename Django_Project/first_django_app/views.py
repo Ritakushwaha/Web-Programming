@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello!!")
+    return render(request, 'first_django_app/index.html')
 
 
 def rita(request):
@@ -13,3 +13,7 @@ def rita(request):
 
 def girwar(request):
     return HttpResponse("Hello Girwar!!")
+
+
+def greet(request, name) :
+    return HttpResponse(f"Hello {name.capitalize()}!!")
